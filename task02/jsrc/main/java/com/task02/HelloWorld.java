@@ -9,6 +9,8 @@ import com.amazonaws.services.lambda.runtime.events.APIGatewayProxyResponseEvent
 import com.syndicate.deployment.model.lambda.url.AuthType;
 import com.syndicate.deployment.model.lambda.url.InvokeMode;
 
+import com.google.gson.Gson;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -27,6 +29,6 @@ public class HelloWorld implements RequestHandler<Object, Map<String, Object>> {
 
 		return new APIGatewayProxyResponseEvent()
 			.withStatusCode(200)
-			.withBody("Hello from Lambda");
+			.withBody(new gson.toJson(new HelloResponse("Hello from Lambda")));
 	}
 }
