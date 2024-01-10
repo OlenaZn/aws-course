@@ -1,0 +1,6 @@
+account_id: '196241772369'
+deploy_target_bucket: cmtr-86f02add-task01-syndicate-bundles-test
+extended_prefix_mode: false
+project_path: C:\AWS\task01
+region: eu-central-1
+use_temp_creds: false
