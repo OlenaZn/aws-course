@@ -22,7 +22,7 @@ import java.util.Map;
 	authType = AuthType.NONE,
 	invokeMode = InvokeMode.BUFFERED
 )
-public class HelloWorld implements RequestHandler<Object, Map<String, Object>> {
+public class HelloWorld implements RequestHandler<APIGatewayProxyRequestEvent, APIGatewayProxyResponseEvent> {
 
 	public APIGatewayProxyResponseEvent handleRequest(APIGatewayProxyRequestEvent apiGatewayProxyRequestEvent, Context context) {
 		Map<String, Object> resultMap = new HashMap<String, Object>();
