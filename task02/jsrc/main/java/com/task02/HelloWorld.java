@@ -24,7 +24,7 @@ import java.util.Map;
 )
 public class HelloWorld implements RequestHandler<Object, Map<String, Object>> {
 
-	public Map<String, Object> handleRequest(APIGatewayProxyRequestEvent apiGatewayProxyRequestEvent, Context context) {
+	public APIGatewayProxyResponseEvent handleRequest(APIGatewayProxyRequestEvent apiGatewayProxyRequestEvent, Context context) {
 		Map<String, Object> resultMap = new HashMap<String, Object>();
 
 		return new APIGatewayProxyResponseEvent()
